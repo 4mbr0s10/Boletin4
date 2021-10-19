@@ -1,0 +1,76 @@
+
+package boletin4;
+
+/**
+ *
+ * @author dam1
+ */
+public class Libro {
+    
+    float valoracion;
+    short numPaginas;
+    String autor;
+    int ano;
+    String titulo;
+
+    public Libro() {
+    }
+
+    public Libro(float valoracion, short numPaginas, String autor, int ano, String titulo) {
+        this.valoracion = valoracion;
+        this.numPaginas = numPaginas;
+        this.autor = autor;
+        this.ano = ano;
+        this.titulo = titulo;
+    }
+
+    public float getValoracion() {
+        return valoracion;
+    }
+
+    public void setValoracion(float valoracion) {
+        this.valoracion = valoracion;
+    }
+
+    public short getNumPaginas() {
+        return numPaginas;
+    }
+
+    public void setNumPaginas(short numPaginas) {
+        this.numPaginas = numPaginas;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    
+    
+    public void amosar (Libro lb){
+        System.out.println("O libro: "+lb.getTitulo()+" de: "+lb.getAutor()+". Ten "+lb.getNumPaginas()+" páxinas.\n"
+                + " E está escrito no ano "+lb.getAno()+". \n"
+                + "O libro ten unha valoración de:  "+lb.getValoracion()+".");
+        
+        
+    }
+    
+}

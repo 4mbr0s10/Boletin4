@@ -1,5 +1,8 @@
-
 package boletin4;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  *
@@ -7,22 +10,33 @@ package boletin4;
  */
 public class Boletin4 {
 
- 
-    public static void main(String[] args) {
-        
-        Libro lb1=new Libro();
-        Libro lb2=new Libro(4.0f, (short) 120, "Manolo", 2010, "El libro es malo");
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Libro lb1 = new Libro();
+        Libro lb2 = new Libro(4.0f, (short) 120, "Manolo", 2010, "El libro es malo");
+        Libro lb3 = new Libro();
+        System.out.println("Cál é o título do libro?");
+        lb3.setTitulo(br.readLine());
+        System.out.println("O nome do autor? ");
+        lb3.setAutor(br.readLine());
+        System.out.println("En qué ano foi escrito? ");
+        lb3.setAno(Integer.parseInt(br.readLine()));
+        System.out.println("Cál é o seu número de páxinas? ");
+        lb3.setNumPaginas(Short.parseShort(br.readLine()));
+        System.out.println("E a súa valoración? ");
+        lb3.setValoracion(Float.parseFloat(br.readLine()));
         lb1.setAutor("Cervantes");
         lb1.setTitulo("Quijote");
-        lb1.setNumPaginas((short)500);
+        lb1.setNumPaginas((short) 500);
         lb1.setValoracion(9.0f);
         lb1.setAno(1605);
-        
+
         lb1.amosar(lb1);
         System.out.println("-----------------------------------------");
         lb2.amosar(lb2);
-        
-        
+        System.out.println("-----------------------------------------");
+        lb3.amosar(lb3);
+
     }
-    
+
 }

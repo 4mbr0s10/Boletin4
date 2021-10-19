@@ -1,0 +1,28 @@
+
+package boletin4;
+
+/**
+ *
+ * @author dam1
+ */
+public class Boletin4 {
+
+ 
+    public static void main(String[] args) {
+        
+        Libro lb1=new Libro();
+        Libro lb2=new Libro(4.0f, (short) 120, "Manolo", 2010, "El libro es malo");
+        lb1.setAutor("Cervantes");
+        lb1.setTitulo("Quijote");
+        lb1.setNumPaginas((short)500);
+        lb1.setValoracion(9.0f);
+        lb1.setAno(1605);
+        
+        lb1.amosar(lb1);
+        System.out.println("-----------------------------------------");
+        lb2.amosar(lb2);
+        
+        
+    }
+    
+}

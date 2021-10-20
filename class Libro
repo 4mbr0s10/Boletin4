@@ -6,11 +6,11 @@ package boletin4;
  */
 public class Libro {
 
-    float valoracion;
-    short numPaginas;
-    String autor;
-    int ano;
-    String titulo;
+   private float valoracion;
+    private short numPaginas;
+    private String autor;
+    private int ano;
+    private String titulo;
 
     public Libro() {
     }
